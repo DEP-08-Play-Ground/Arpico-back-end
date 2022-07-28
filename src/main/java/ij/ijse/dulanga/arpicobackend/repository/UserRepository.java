@@ -8,5 +8,6 @@ import org.springframework.data.repository.CrudRepository;
 public interface UserRepository extends CrudRepository<User,String> {
     boolean existsUserByUsername(String email);
     User findUserByUsername(String username) throws NotFoundException;
+    void deleteUserByUsername(String username);
 
 }
