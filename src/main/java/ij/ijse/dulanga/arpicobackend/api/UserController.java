@@ -44,9 +44,10 @@ public class UserController {
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @PatchMapping(path = "/{userId}", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void updateUser(@PathVariable String userId, @RequestBody @Valid UserDTO user) {
-
+    @PatchMapping(path = "/{username}", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public void updateUser(@PathVariable String username, @RequestBody @Valid UserDTO user) {
+        user.setUsername(username);
+        userService.updateUSer(user);
     }
 
 }
