@@ -4,12 +4,15 @@ import ij.ijse.dulanga.arpicobackend.dto.UserDTO;
 import ij.ijse.dulanga.arpicobackend.service.UserService;
 import ij.ijse.dulanga.arpicobackend.service.exception.DuplicateEmailException;
 import ij.ijse.dulanga.arpicobackend.service.exception.NotFoundException;
+import ij.ijse.dulanga.arpicobackend.service.util.EntityDTOTransformer;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional
 public class UserServiceImpl implements UserService {
+
+    private EntityDTOTransformer transformer;
 
     @Override
     public UserDTO registerUser(UserDTO user) throws DuplicateEmailException {
