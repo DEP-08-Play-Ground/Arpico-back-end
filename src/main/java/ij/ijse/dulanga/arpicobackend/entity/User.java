@@ -29,6 +29,6 @@ public class User implements SuperEntity {
     @Column(nullable = false)
     private Integer age;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String email;
 }
