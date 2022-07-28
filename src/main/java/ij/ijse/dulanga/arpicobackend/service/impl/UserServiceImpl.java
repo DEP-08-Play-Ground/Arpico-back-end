@@ -35,8 +35,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserDTO getUserInfo(String userId) throws NotFoundException {
-        return null;
+    public UserDTO getUserInfo(String username) throws NotFoundException {
+        return transformer.getUserDTO(userRepository.findUserByUsername(username));
     }
 
     @Override
