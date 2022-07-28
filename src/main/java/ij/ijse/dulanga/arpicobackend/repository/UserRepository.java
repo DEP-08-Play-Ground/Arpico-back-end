@@ -5,5 +5,5 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface UserRepository extends CrudRepository<User,String> {
     User saveUser(User user);
-
+    boolean existsUserByUsername(String email);
 }
