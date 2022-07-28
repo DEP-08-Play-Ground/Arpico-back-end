@@ -32,9 +32,9 @@ public class UserController {
         return user;
     }
 
-    @GetMapping(path = "/{userId}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public UserDTO getUserInfo(@PathVariable String userId) {
-        return null;
+    @GetMapping(path = "/{username}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public UserDTO getUserInfo(@PathVariable String username) {
+        return userService.getUserInfo(username);
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
