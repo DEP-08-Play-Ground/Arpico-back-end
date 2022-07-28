@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @Transactional
 public class UserServiceImpl implements UserService {
+
     @Override
     public UserDTO registerUser(UserDTO user) throws DuplicateEmailException {
         return null;
